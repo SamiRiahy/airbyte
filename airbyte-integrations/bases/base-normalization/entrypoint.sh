@@ -118,8 +118,8 @@ function main() {
     # So we need to only pass `--event-buffer-size` if it's supported by DBT.
     dbt --help | grep -E -- '--event-buffer-size'
     if [ $? -eq 0 ]; then
-      echo -e "\nDBT >=1.0.0 detected; using 10K event buffer size\n"
-      dbt_additional_args="--event-buffer-size=10000"
+      echo -e "\nDBT >=1.0.0 detected; using 50K event buffer size\n"
+      dbt_additional_args="--event-buffer-size=50000"
     else
       dbt_additional_args=""
     fi
